@@ -1,0 +1,24 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WordCount Program_about</title>
+    <link rel="stylesheet" type="text/CSS" href="{% static 'wordcount/style.css' %}">
+</head>
+<body>
+    <h1> About Wordcount </h1>
+    <br>
+    <div class="text"> 이 웹 페이지는 Python과 Django 를 활용하여 만든 
+            Wordcount(단어 수 세는 프로그램)입니다!</div>
+            <br>
+            <div class="by">by 한결</div>
+            <br>
+            <br> 
+    <p>
+    <a href="{% url 'home' %}" class="return">Return to home</a>
+    </p>
+</body>
+</html>

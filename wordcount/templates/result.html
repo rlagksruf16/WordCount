@@ -1,0 +1,32 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WordCount Program_Result</title>
+    <link rel="stylesheet" type="text/CSS" href="{% static 'wordcount/style.css' %}">
+</head>
+<body>
+    <h1> Result </h1>
+    <br>
+    <br>
+    <h3> 입력한 텍스트의 단어 수 <div class="total">{{total}}</div></h3>
+    <br>
+    <h3> 입력한 텍스트 </h3>
+    <div class="fulltext">{{ fulltext }}</div>
+    <br>
+    <h3> 단어 카운트 <h3>
+    {% for word, frequency in dictionary %}
+    {{word}} - <div class="frequency">{{frequency}}</div>
+    <br>
+    {%endfor%}
+    <br>
+    <br>
+    <br>
+    <p>
+    <a href="{% url 'home' %}" class="return">Return to home</a>
+    </p>
+</body>
+</html>

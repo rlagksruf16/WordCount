@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WordCount Program</title>
+    <link rel="stylesheet" type="text/CSS" href="{% static 'wordcount/style.css' %}">
+</head>
+<body>
+    <h1>Wordcount Application</h1>
+
+<p>
+    <a href="{% url 'about' %}" class="about"> ABOUT </a>
+</p>
+
+
+<form action="{% url 'result' %}">
+    <br>
+    <br>
+    <textarea cols="40" rows="20" name="fulltext" placeholder="여기에 입력하세요!" class="textbox"></textarea>
+    <br>
+    <br>
+    <div class ="wrap">
+    <p>
+    <input type="submit" value="Count!" class="button" >
+    </p>
+    </div>
+</form>
+
+</body>
+</html>
